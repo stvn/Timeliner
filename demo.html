@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="src/sample_data/timeline_events_json.js"></script>
+
+  <script type="text/javascript" src="lib/templ8/templ8.js"></script>
+  <script type="text/javascript" src="lib/jQuery/jquery-1.6.js"></script>
+  <script type="text/javascript" src="src/templates/bricks.js"></script>
+  <script type="text/javascript" src="src/templates/templates.js"></script>
+  <script type="text/javascript" src="src/timeliner.js"></script>
+
+  <link href="resources/css/base_styles.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript">
+    jQuery(function ($) { 
+      timeline = Timeliner.create(timelineEvents);
+      timeline.load();
+
+      var $ts = $('.timeline-segment');
+
+      $ts.mouseover(function () {
+        $(this).find('.details').show();
+      }).mouseout(function () {
+        $(this).find('.details')[0].style.display = '';
+      });
+
+      $('#timeline-view-toggle').click(function () {
+        timeline.toggleView();
+      });
+
+    });
+  </script>
+</head>
+  <h1>Timeliner - Demo </h1>
+  <p>Timeliner allows you to easily display time-based data in different ways.  The content below is displayed without style and loaded via pre-defined templates using a blob of JSON.  Use the toggle view button to toggle between list-view and timeline-view.</p>
+  <button id="timeline-view-toggle">Toggle View</button>
+  <div style="clear:both;"></div>
+<body>
+</body>
+</html>

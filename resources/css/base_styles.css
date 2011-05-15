@@ -1,0 +1,93 @@
+ul,li,p,div,h1,h2,h3,h4 {margin:0;padding:0;}
+
+#timeline-view-toggle {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.timeline-view {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #333;
+}
+
+.timeline-view .timeline-segment {
+  display: inline-block;
+  width: 10px;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid #888;
+  cursor: pointer;
+  position: relative;
+}
+
+.timeline-view .timeline-segment:hover {
+  background-color: #E1EBF5;
+}
+
+.timeline-view .timeline-segment .details {
+  display: none;
+  position: absolute;
+  top: 20px; left: 10px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 0 8px 8px 8px;
+  background-color: #E1EBF5;
+  z-index: 5;
+}
+
+.timeline-view .date,
+.timeline-view .title,
+.timeline-view .description,
+.timeline-view .images {
+  margin: 5px 0;
+}
+
+.timeline-view .date {
+  font-size: 10px;
+}
+
+.timeline-view .title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.timeline-view .description {
+  margin-bottom: 20px;
+}
+
+.timeline-view .images .image {
+  display: inline;
+  margin: 0 2px;
+}
+
+.list-view .timeline-segment{
+  margin-bottom: 15px;
+}
+
+.list-view .date {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.list-view .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list-view .description {
+  margin: 10px 0;
+}
+
+.list-view .images .image {
+  display: inline;
+  margin: 0 2px;
+}
+
+.list-view .images .image image {
+  border: 1px solid #333;
+  padding: 1px;
+}
